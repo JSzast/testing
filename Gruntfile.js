@@ -1,28 +1,22 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
-    pkg: grunt.readJSON('package.json'),
-    cssmin: {
-      combine: {
+    pkg: grunt.file.readJSON('package.json'),
+    less: {
+      development: {
+        options: {
+          paths: ['css']
+        },
         files: {
-          'css/main.css': ['css/content.css', 'css/other.css']
-        }
-      }
-    }
-
-    uglify: {
-      dist: {
-        files: {
-          'js/script.min.js': ['js/script.js']
+        'css/result.css': 'less/style.less'
         }
       }
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-less');
 
-  grunt.registerTask('default', ['cssmin', 'uglify']);
+  grunt.registerTask('default', ['less']);
 
   // grunt.registerTask('logger', '', function() {
   //   console.log('This grunt task is pointless.');

@@ -5,6 +5,7 @@
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <title>Jakieś tam pierdoly</title>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <link href="css/result.css" rel="stylesheet">
 </head>
 <body>
   <style>
@@ -21,13 +22,13 @@
   </div>
 
   <script>
-    var text = '{"name":"John Johnson","street":"Oslo West 16","phone":"555 1234567"}';
-    console.log(typeof text)
-    console.log(text)
+    var text = {"name":"John Johnson","street":"Oslo West 16","phone":"555 1234567"};
 
-    var obj = JSON.parse(text);
+    var obj = JSON.stringify(text);
     console.log(typeof obj)
     console.log(obj)
+
+    console.log(JSON)
 
     // obj = JSON.stringify(text);
     // console.log(typeof obj)
