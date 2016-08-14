@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <title>Jakieś tam pierdoly</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+  <style>
+
+  </style>
+
+  <div>
+
+  </div>
+
+  <div ng-app="">
+    <div>{{ 1 + 1 }}</div>
+    <div>{{ 'ble' }}</div>
+  </div>
+
+  <script>
+    var text = '{"name":"John Johnson","street":"Oslo West 16","phone":"555 1234567"}';
+    console.log(typeof text)
+    console.log(text)
+
+    var obj = JSON.parse(text);
+    console.log(typeof obj)
+    console.log(obj)
+
+
+  </script>
+</body>
+</html>
