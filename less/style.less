@@ -1,4 +1,5 @@
 @import 'library.less';
+@import 'animations.less';
 
 @background-color: beige;
 @div-color: darken(@background-color, 20%);
@@ -8,13 +9,38 @@ body {
   div {
     background-color: @div-color;
     margin-top: 10px;
+    position: relative;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
     // content: ~'To jest kontent wstawiony przez LESS-a.';
   }
   .@{my-selector} {
     width: 50%;
-    margin: 0 auto;
-    background-color: lighten(@background-color, 20%);
+    // margin: 0 auto;
     font-size: 1em * 2;
     text-align: center;
+    animation: color-change 5s infinite;
+  }
+}
+
+.bordered {
+  border-bottom: 10px dashed green;
+  border-top: 10px dotted pink;
+}
+
+div {
+  .bordered;
+  border-left: 10px double coral;
+  border-right: 10px solid khaki;
+}
+
+#unique {
+  background-color: plum;
+  &:before {
+    content: "LOL";
+    }
+  &:after {
+    content: "ROTFL";
   }
 }

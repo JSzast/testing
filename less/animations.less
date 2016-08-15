@@ -1,0 +1,14 @@
+@keyframes example {
+  from {margin: 0;}
+  to {margin: 0 auto;}
+}
+
+@div-distance: 500px;
+
+@keyframes color-change {
+  0%   {background-color: red; top: 0; left: 0;}
+  25%  {background-color: yellow; top: 0; left: @div-distance;}
+  50%  {background-color: blue; top: @div-distance; left: @div-distance;}
+  75%  {background-color: gold; top: @div-distance; left: 0;}
+  100% {background-color: green; top: 0; left: 0;}
+}

@@ -1,17 +1,74 @@
 div {
   border: 3px dotted green;
 }
+@keyframes example {
+  from {
+    margin: 0;
+  }
+  to {
+    margin: 0 auto;
+  }
+}
+@keyframes color-change {
+  0% {
+    background-color: red;
+    top: 0;
+    left: 0;
+  }
+  25% {
+    background-color: yellow;
+    top: 0;
+    left: 500px;
+  }
+  50% {
+    background-color: blue;
+    top: 500px;
+    left: 500px;
+  }
+  75% {
+    background-color: gold;
+    top: 500px;
+    left: 0;
+  }
+  100% {
+    background-color: green;
+    top: 0;
+    left: 0;
+  }
+}
 body {
   background-color: beige;
 }
 body div {
   background-color: #dede8d;
   margin-top: 10px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 body .var-div {
   width: 50%;
-  margin: 0 auto;
-  background-color: #ffffff;
   font-size: 2em;
   text-align: center;
+  animation: color-change 5s infinite;
+}
+.bordered {
+  border-bottom: 10px dashed green;
+  border-top: 10px dotted pink;
+}
+div {
+  border-bottom: 10px dashed green;
+  border-top: 10px dotted pink;
+  border-left: 10px double coral;
+  border-right: 10px solid khaki;
+}
+#unique {
+  background-color: plum;
+}
+#unique:before {
+  content: "LOL";
+}
+#unique:after {
+  content: "ROTFL";
 }
