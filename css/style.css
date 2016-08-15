@@ -1,0 +1,17 @@
+div {
+  border: 3px dotted green;
+}
+body {
+  background-color: beige;
+}
+body div {
+  background-color: #dede8d;
+  margin-top: 10px;
+}
+body .var-div {
+  width: 50%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  font-size: 2em;
+  text-align: center;
+}

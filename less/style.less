@@ -1,5 +1,20 @@
+@import 'library.less';
+
 @background-color: beige;
+@div-color: darken(@background-color, 20%);
 
 body {
   background-color: @background-color;
+  div {
+    background-color: @div-color;
+    margin-top: 10px;
+    // content: ~'To jest kontent wstawiony przez LESS-a.';
+  }
+  .@{my-selector} {
+    width: 50%;
+    margin: 0 auto;
+    background-color: lighten(@background-color, 20%);
+    font-size: 1em * 2;
+    text-align: center;
+  }
 }

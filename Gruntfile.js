@@ -9,7 +9,7 @@ module.exports = function(grunt) {
           compress: false,
         },
         files: {
-          'css/result.css': 'less/style.less'
+          'css/style.css': 'less/style.less'
         }
       },
       production: {
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
           sourceMapFilename: 'sorsmapa'
         },
         files: {
-          'css/result.css': 'less/style.less'
+          'css/style.css': 'less/style.less'
         }
       }
     },
@@ -38,10 +38,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['less', 'watch']);
+  grunt.registerTask('default', ['less:development', 'watch']);
 
-  // grunt.registerTask('logger', '', function() {
-  //   console.log('This grunt task is pointless.');
-  //   console.log('IMMA SUPPA COMPUTTAH!.');
-  // })
+  grunt.registerTask('logger', '', function() {
+    console.log('IMMA SUPPA COMPUTTAH!.');
+  })
 };
